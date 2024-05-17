@@ -164,3 +164,7 @@ label.required:after {
   flex: 2;
   padding: 0.5rem 1rem;
 }
+
+form input::placeholder {
+  font-style: italic;
+}

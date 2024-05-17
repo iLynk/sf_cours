@@ -1,25 +1,30 @@
 <nav>
-	<a href="{{ path('app_home') }}"
-	   {% if app.request.get('_route') == 'app_home' %}class="active"{% endif %}>
-		{{ ux_icon('ph:house-line', {'class': 'icon'}) }}
-		Accueil
-	</a>
+    <a href="{{ path('app_home') }}"
+       {% if app.request.get('_route') == 'app_home' %}class="active"{% endif %}>
+        {{ ux_icon('ph:house-line', {'class': 'icon'}) }}
+        Accueil
+    </a>
 
-	<a href="{{ path('app_contact') }}"
-	   {% if app.request.get('_route') == 'app_contact' %}class="active"{% endif %}>
-		{{ ux_icon('lucide:mail', {'class': 'icon'}) }}
-		Contact
-	</a>
+    <a href="{{ path('app_contact') }}"
+       {% if app.request.get('_route') == 'app_contact' %}class="active"{% endif %}>
+        {{ ux_icon('lucide:mail', {'class': 'icon'}) }}
+        Contact
+    </a>
 
-	<a href="{{ path('app_cakecategory_default_index') }}"
-	   {% if 'app_cakecategory_' in app.request.get('_route') %}class="active"{% endif %}>
-		{{ ux_icon('tabler:brand-cakephp', {'class': 'icon'}) }}
-		Catégories de Gâteaux
-	</a>
+    <a href="{{ path('app_cakecategory_default_index') }}"
+       {% if 'app_cakecategory_' in app.request.get('_route') %}class="active"{% endif %}>
+        {{ ux_icon('tabler:brand-cakephp', {'class': 'icon'}) }}
+        Catégories de Gâteaux
+    </a>
 
-	<a href="{{ path('app_cake_default') }}"
-	   {% if 'app_cake_' in app.request.get('_route') %}class="active"{% endif %}>
-		{{ ux_icon('game-icons:pie-slice', {'class': 'icon'}) }}
-		Gâteaux
-	</a>
+    <a href="{{ path('app_cake_default') }}"
+       {% if 'app_cake_' in app.request.get('_route') %}class="active"{% endif %}>
+        {{ ux_icon('game-icons:pie-slice', {'class': 'icon'}) }}
+        Gâteaux
+    </a>
+    {% if not app.user %}
+    <a href="{{ path('app_login') }}" {% if app.request.get('_route') == 'app_home' %}class="active"{% endif %}>Connexion</a>
+    {% else %}
+    <a href="{{ path('app_logout') }}" {% if app.request.get('_route') == 'app_home' %}class="active"{% endif %}>Déconnexion</a>
+    {% endif %}
 </nav>
