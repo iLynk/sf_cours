@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tous les Gâteaux{% endblock %}
+
+{% block body %}
+    <h1>Les Gâteaux</h1>
+
+    <div class="grid">
+        {% include 'cake/partials/_grid.html.twig' %}
+
+        <div class="grid-item">
+            <div class="body">
+                <a href="{{ path('app_cake_add') }}" class="success">
+                    {{ ux_icon('icons8:plus', {'class': 'icon success'}) }}
+                </a>
+            </div>
+            <footer>
+                <a href="{{ path('app_cake_add') }}" class="success btn">nouveau</a>
+            </footer>
+        </div>
+    </div>
+{% endblock %}

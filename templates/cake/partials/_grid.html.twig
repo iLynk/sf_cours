@@ -1,0 +1,19 @@
+{% for cake in cakes %}
+    <div class="grid-item">
+        <div class="body">
+            <a href="{{ path('app_cake_view', {'slug': cake.slug}) }}">
+                <img src="{{ asset('uploads/cake/' ~ cake.image) }}" alt="{{ cake.name }}"/>
+                <h2>{{ cake.name }}</h2>
+                <h3>{{ cake.category.name }}</h3>
+            </a>
+        </div>
+        <footer>
+            <a href="{{ path('app_cake_view', {'slug': cake.slug}) }}" class="btn">détails</a>
+            <a href="{{ path('app_cake_edit', {'slug': cake.slug}) }}" class="info btn">modifier</a>
+            <a href="{{ path('app_cake_delete', {'id': cake.id}) }}" class="danger btn"
+               onclick="return window.confirm('Êtes-vous sûr de vouloir supprimer ce gâteau ?')">
+                supprimer
+            </a>
+        </footer>
+    </div>
+{% endfor %}

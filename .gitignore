@@ -1,4 +1,9 @@
 
+###> sf_tutorial/local ###
+thumbs.db
+.vscode/
+.idea/
+
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php

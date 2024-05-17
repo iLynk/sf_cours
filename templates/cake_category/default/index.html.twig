@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CakeCategory index{% endblock %}
+
+{% block body %}
+    <h1>CakeCategory index</h1>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Slug</th>
+            <th>Active</th>
+            <th>actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for cake_category in cake_categories %}
+            <tr>
+                <td>{{ cake_category.id }}</td>
+                <td>{{ cake_category.name }}</td>
+                <td>{{ cake_category.slug }}</td>
+                <td>{{ cake_category.active ? 'Yes' : 'No' }}</td>
+                <td>
+                    <a href="{{ path('app_cakecategory_view', {'slug': cake_category.slug}) }}">show</a>
+                    <a href="{{ path('app_cakecategory_edit', {'slug': cake_category.slug}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_cakecategory_add') }}">Create new</a>
+{% endblock %}

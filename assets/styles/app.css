@@ -1,3 +1,166 @@
+/* GLOBALS */
+.success {
+  color: forestgreen !important;
+}
+
+.info {
+  color: cornflowerblue !important;
+}
+
+.danger {
+  color: crimson !important;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: lightseagreen;
+}
+
+.icon {
+  width: 1.5rem;
+  vertical-align: bottom;
+}
+
+.btn {
+  flex: 1;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
 body {
-    background-color: skyblue;
+  background-color: aliceblue;
+}
+
+nav {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: bisque;
+  border-left: 0.25rem solid black;
+  border-bottom: 0.25rem solid black;
+  border-radius: 0.25rem;
+}
+
+nav a {
+  display: inline-block;
+  margin: 0 1rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  border-radius: 0.25rem;
+  transition: all 0.5s;
+}
+
+nav a:hover,
+nav a.active {
+  color: white;
+  background-color: brown;
+}
+
+nav a .icon {
+  width: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 0.25rem;
+}
+
+.grid-item .body a {
+  display: block;
+  text-decoration: none;
+}
+
+.grid-item .body img,
+.grid-item .body .icon {
+  width: auto;
+  height: 20dvh;
+}
+
+.grid-item .body img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.25rem;
+}
+
+.grid-item footer {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  justify-content: space-between;
+}
+
+.alert {
+  padding: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.alert.success {
+  color: white !important;
+  background-color: forestgreen;
+}
+
+form {
+  margin: 1rem auto;
+  width: 50dvw;
+}
+
+fieldset {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid black;
+  border-radius: 0.25rem;
+}
+
+legend {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  flex: 1;
+  font-weight: bold;
+}
+
+label.required:after {
+  content: " *";
+  color: crimson;
+}
+
+.form-control {
+  flex: 2;
+  padding: 0.5rem 1rem;
 }

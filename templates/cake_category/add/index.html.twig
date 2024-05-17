@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouvelle Catégorie de Gâteaux{% endblock %}
+
+{% block body %}
+    <a href="{{ path('app_cakecategory_default_index') }}">
+        {{ ux_icon('icon-park-outline:back', {'class': 'icon'}) }}
+        Retour aux catégories
+    </a>
+    <hr/>
+
+    <h1>Ajouter une Catégorie de Gâteaux</h1>
+    {% include 'cake_category/partials/_form.html.twig' %}
+{% endblock %}
